@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" name="Sams Omniture Tests" parallel="classes">
+  <parameter name="implicitWait" value="${implicitWait}"/>
+  <parameter name="islocalrun" value="false"/>
+  <parameter name="execution.track" value="${execution.track}"/>
+  <parameter name="cookie" value="SAT_CART=1,SAT_CHCN=1"/>
+  <parameter name="test.env" value="mqa"/>
+  <parameter name="rerunFailed" value="${rerunFailed}"/>
+  <parameter name="propertyPath" value="${propertyPath}"/>
+  <parameter name="execution.release" value="${execution.release}"/>
+  <parameter name="selenium.url" value="${selenium.url}"/>
+  <parameter name="isFailedSuiteRun" value="${isFailedSuiteRun}"/>
+  <parameter name="scriptTimeout" value="${scriptTimeout}"/>
+  <parameter name="pageLoadTimeout" value="${pageLoadTimeout}"/>
+  <parameter name="execution.type" value="${execution.type}"/>
+  <parameter name="selenium.browser" value="chrome"/>
+  <parameter name="selenium.platform" value="LINUX"/>
+  <parameter name="test.publishreports" value="${test.publishreports}"/>
+  <test verbose="2" name="Default test">
+    <classes>
+        <class name="com.walmart.qa.omniture.ui.V2Cart.V2CartAndCheckoutEndToEndTestsSuite1">
+        <!-- <class name="com.walmart.qa.omniture.ui.V2Cart.OmnitureTestSuites1"> -->
+        <methods>
+          <include name="e2eCoventionalPurchaseShipOnlineOmniture"/>
+        </methods>
+      </class> <!-- com.walmart.qa.omniture.ui.V2Cart.V2CartAndCheckoutEndToEndTestsSuite1 -->
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Omniture Tests -->

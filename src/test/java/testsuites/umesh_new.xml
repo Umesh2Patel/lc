@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"
+[<!ENTITY parent SYSTEM "../src/test/resources/testParameters.xml">]>
+
+<suite name="Sams Estore Tests" verbose="1" parallel="classes"
+       thread-count="10">
+<!-- <listeners> <listener class-name="com.samsclub.qa.homepage.execution.ExecutionConfigListener" 
+              /> </listeners> -->
+
+       <parameter name="test.env" value="mqa" />
+       <parameter name="propertyPath" value="${propertyPath}" />
+       <parameter name="selenium.url" value="${selenium.url}" />
+       <parameter name="islocalrun" value="true" ></parameter>
+       <parameter name="test.publishreports" value="${test.publishreports}"></parameter>
+       <parameter name="rerunFailed" value="${rerunFailed}"></parameter>
+       <parameter name="isFailedSuiteRun" value="${isFailedSuiteRun}"></parameter>
+       <parameter name="execution.release" value="${execution.release}" />
+       <parameter name="execution.type" value="${execution.type}" />
+       <parameter name="execution.track" value="${execution.track}" />
+       <parameter name="selenium.browser" value="chrome" />
+       <parameter name="pageLoadTimeout" value="${pageLoadTimeout}" />
+       <parameter name="implicitWait" value="${implicitWait}" />
+       <parameter name="scriptTimeout" value="${scriptTimeout}" />
+       <parameter name="cookie" value="SAT_CART=1,SAT_CHCN=1" />
+       <test name="ChaletTests">
+              <groups>
+                     <run>
+                           <!-- <include name="prod" /> -->
+                     </run>
+              </groups>
+              
+               <classes>
+                     
+                     <class name= "com.walmart.qa.samsclub.chalet.ui.V2HeaderFlyoutTests" >
+                     <methods>
+        
+       
+             <include name="checkBusinessFlyout_BusinessServices"/>
+             <include name="checkBusinessFlyout_BusinessTools_AnonymousUser"/>
+             <include name="checkBusinessFlyout_BusinessTools_Logged_In_User"/>
+             <include name="checkBusinessFlyout_ShopByBusiness"/>
+             
+     </methods>
+     </class>
+
+              </classes>
+       </test>
+</suite>               
+                
+                    
+                      
+        
+       
+            
+
+
+                   
+
+                    
+    
+                     
+                     
+                     
+
+    
