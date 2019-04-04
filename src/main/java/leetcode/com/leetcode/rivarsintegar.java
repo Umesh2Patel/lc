@@ -9,7 +9,7 @@ public class rivarsintegar {
 	The input is assumed to be a 32-bit signed integer. Your function should return 0 when the reversed integer overflows.*/
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(reverse(0));
+		System.out.println(reverse(34567));
 //		Math.abs(-2147483648) java
 //		System.out.println(reverse(321));
 	}
