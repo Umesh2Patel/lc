@@ -10,6 +10,8 @@ import java.util.concurrent.*;
 import java.util.function.*;
 import java.util.regex.*;
 import java.util.stream.*;
+
+
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
@@ -26,6 +28,18 @@ public class Tableau {
      
      // a = [1,2]
      // b = [2,3]
+	
+	public static void main(String[] args) {
+		List<Integer> a = new ArrayList<Integer>();
+		List<Integer> b = new ArrayList<Integer>();
+		a.add(1);
+		a.add(2);
+		b.add(2);
+		b.add(3);
+		List<Integer> c = mergeArrays(a,b);
+		System.out.println(c);
+		
+	}
 
     public static List<Integer> mergeArrays(List<Integer> a, List<Integer> b) {
     // Write your code here
@@ -50,50 +64,50 @@ public class Tableau {
 
 }
 
-class Solution {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        int aCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-        List<Integer> a = IntStream.range(0, aCount).mapToObj(i -> {
-            try {
-                return bufferedReader.readLine().replaceAll("\\s+$", "");
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        })
-            .map(String::trim)
-            .map(Integer::parseInt)
-            .collect(toList());
-
-        int bCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-        List<Integer> b = IntStream.range(0, bCount).mapToObj(i -> {
-            try {
-                return bufferedReader.readLine().replaceAll("\\s+$", "");
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-        })
-            .map(String::trim)
-            .map(Integer::parseInt)
-            .collect(toList());
-
-        List<Integer> result = Result.mergeArrays(a, b);
-
-        bufferedWriter.write(
-            result.stream()
-                .map(Object::toString)
-                .collect(joining("\n"))
-            + "\n"
-        );
-
-        bufferedReader.close();
-        bufferedWriter.close();
-    }
-    
-   
-}
+//class Solution {
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+//
+//        int aCount = Integer.parseInt(bufferedReader.readLine().trim());
+//
+//        List<Integer> a = IntStream.range(0, aCount).mapToObj(i -> {
+//            try {
+//                return bufferedReader.readLine().replaceAll("\\s+$", "");
+//            } catch (IOException ex) {
+//                throw new RuntimeException(ex);
+//            }
+//        })
+//            .map(String::trim)
+//            .map(Integer::parseInt)
+//            .collect(toList());
+//
+//        int bCount = Integer.parseInt(bufferedReader.readLine().trim());
+//
+//        List<Integer> b = IntStream.range(0, bCount).mapToObj(i -> {
+//            try {
+//                return bufferedReader.readLine().replaceAll("\\s+$", "");
+//            } catch (IOException ex) {
+//                throw new RuntimeException(ex);
+//            }
+//        })
+//            .map(String::trim)
+//            .map(Integer::parseInt)
+//            .collect(toList());
+//
+//        List<Integer> result = Result.mergeArrays(a, b);
+//
+//        bufferedWriter.write(
+//            result.stream()
+//                .map(Object::toString)
+//                .collect(joining("\n"))
+//            + "\n"
+//        );
+//
+//        bufferedReader.close();
+//        bufferedWriter.close();
+//    }
+//    
+//   
+//}
 
