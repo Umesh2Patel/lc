@@ -26,11 +26,11 @@ public class Candy {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		int[] rat1 = {1,0,2};
-//		int[] rat2 = {1,2,2};
-//		System.out.println(candy(rat1));
-//		System.out.println(candy(rat2));
-		System.out.println(candy("Hello"));
+		int[] rat1 = {1,0,2};
+		int[] rat2 = {1,2,2};
+		System.out.println(candy(rat1));
+		System.out.println(candy(rat2));
+//		System.out.println(candy("Hello"));
 
 	}
 	

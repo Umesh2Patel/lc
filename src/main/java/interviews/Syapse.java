@@ -1,4 +1,4 @@
-package syapse;
+package interviews;
 
 
 import java.io.BufferedReader;
@@ -10,7 +10,7 @@ import org.json.simple.*;
 import org.json.simple.parser.*;
 import org.json.simple.parser.ParseException;
 
-public class TestA {
+public class Syapse {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
