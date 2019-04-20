@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Iterator;
+
 import org.json.simple.*;
 import org.json.simple.parser.*;
-import org.json.simple.parser.ParseException;
 
 public class Syapse {
 

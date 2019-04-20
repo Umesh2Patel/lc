@@ -1,6 +1,7 @@
 package interviews;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Tableau2 {
@@ -11,6 +12,7 @@ public class Tableau2 {
 		List<Integer> b = new ArrayList<Integer>();
 		a.add(1);
 		a.add(2);
+		a.add(0);
 		b.add(2);
 		b.add(3);
 		List<Integer> c = mergeArrays(a,b);
@@ -19,6 +21,12 @@ public class Tableau2 {
 
 	private static List<Integer> mergeArrays(List<Integer> a, List<Integer> b) {
 		// TODO Auto-generated method stub
+		a.addAll(b);
+		Collections.sort(a);
+		for(int i=0; i<a.size();i++ )
+        {
+            System.out.println(a.get(i));
+        }
 		for (int i = 1; i < b.size(); i++){
 	        int ele = b.get(i);
 	        int j = a.size();
