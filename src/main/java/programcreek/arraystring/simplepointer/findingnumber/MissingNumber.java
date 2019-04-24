@@ -19,7 +19,7 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] nums = {0, 3,5,2,1,6,4};
+		int[] nums = {0,3,5,2,1,6,4};
 		System.out.println(missingNumber(nums));
 	}
 	public static int missingNumber(int[] nums) {
