@@ -1,4 +1,4 @@
-package programcreek.arraystring.simplepointer;
+package interviews;
 
 import java.util.Arrays;
 
