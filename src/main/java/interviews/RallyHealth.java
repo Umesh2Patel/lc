@@ -2,10 +2,11 @@ package interviews;
 
 public class RallyHealth {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
+
 	
 	/*//Write a function that takes a sorted array of integers and an integer value and returns the index at which the value occurs.
 
@@ -50,29 +51,25 @@ solution (arr, p, r, v) // output = 2
 
 */
 
-public int solution(int[] arr, int p, int r, int v){
-    int q = (p+r)/2; // 
-    if(p > r ) return -1;
-    else{
-        if(arr[q]==v){
-            if(arr[q] == arr[q+1])
-         return q;   
-        }
-            
-            
-        else if (arr[q] > v)
-            return solution(arr, p, q-1, v);
-        else 
-            return solution(arr, q+1, r, v);
+public int solution(int[] arr, int p, int r, int v) {
+    int q = (p + r) / 2; //
+    if (p > r) return -1;
+    else {
+        if (arr[q] == v) {
+            if (arr[q] == arr[q + 1])
+                return q;
+        } else if (arr[q] > v)
+            return solution(arr, p, q - 1, v);
+        else
+            return solution(arr, q + 1, r, v);
     }
+return 0;
+//pytest
+//scalatest
+//cyprus- javascript
+//appium
+
+
 }
-pytest
-scalatest
-cyprus- javascript
-appium
-
-
-
-*/
 
 }

@@ -32,28 +32,28 @@ public class Amazon {
 
 	}
 
-	public static int minDeletions(int[] arr){
-        Arrays.sort(arr);
-        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
-        int count = 1;
-        int output = 0;
-        for(int i = 0; i < arr.length; i++){
-            if(hm.containsKey(arr[i])){ //1,2,2,3
-                hm.put(arr[i], ++hm.get(arr[i]));
-            }else{
-                hm.put(arr[i], 1); 
-            }
-        }
-        for(Map.Entry m : hm.entrySet()){
-            if(m.getKey() != m.getValue()){
-                output += m.getValue();
-            }
-            else if (m.getValue() > m.getKey(){
-                output = output + m.getValue() - m.getKey();
-            }
-        }
-        return output;
-    }
+//	public static int minDeletions(int[] arr){
+//        Arrays.sort(arr);
+//        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+//        int count = 1;
+//        int output = 0;
+//        for(int i = 0; i < arr.length; i++){
+//            if(hm.containsKey(arr[i])){ //1,2,2,3
+//                hm.put(arr[i], ++hm.get(arr[i]));
+//            }else{
+//                hm.put(arr[i], 1);
+//            }
+//        }
+//        for(Map.Entry m : hm.entrySet()){
+//            if(m.getKey() != m.getValue()){
+//                output += m.getValue();
+//            }
+//            else if (m.getValue() > m.getKey()){
+//                output = output + m.getValue() - m.getKey();
+//            }
+//        }
+//        return output;
+//    }
 
 }
 

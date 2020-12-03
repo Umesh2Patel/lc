@@ -38,12 +38,13 @@ What if the inputs contain unicode characters? How would you adapt your solution
 	    for (int i = 0; i < s.length(); i++) {
 //	    	System.out.println(s.charAt(i) - 'a');
 //	    	System.out.println(t.charAt(i) - 'a');
-//	    	System.out.println(s.charAt(i) );
-//	    	System.out.println(t.charAt(i));
-//	    	System.out.println(Character.getNumericValue('a'));
-//	    	System.out.println(Character.getNumericValue('n'));	    	
+	    	System.out.println(s.charAt(i) );
+	    	System.out.println(t.charAt(i));
+	    	System.out.println(Character.getNumericValue('a'));
+	    	System.out.println(Character.getNumericValue('n'));	    	
 	        counter[s.charAt(i) - 'a']++;
 	        counter[t.charAt(i) - 'a']--;
+	        System.out.println(counter.toString());
 	    }
 	    for (int count : counter) {
 	        if (count != 0) {
