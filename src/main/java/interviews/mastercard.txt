@@ -1,0 +1,105 @@
+public class EvenList {
+
+ public static void main(String[] args) {
+    List<String> numbers = Arrays.asList("1", "2", "3", "4", "5", "6");
+    List<Integer> even = findEven(numbers);
+
+
+
+    System.out.println("processed list, only even numbers: " + even);
+   }
+
+   public static List<Integer> findEven(List<String> numbers){
+
+   List<Integer> even = new List<Integer>();
+
+   for(int i=0; i<numbers.sie(); i++){
+   if(Integer.valueOf(numbers[i]) % 2 == 0) {
+   	even.add(numbers[i]);
+   }
+   }
+   return even;
+   }
+}
+
+
+
+Generate a list of prime number
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, ..
+
+19->2, 3, 5, 7, 11, 13, 17, 19
+
+20->2, 3, 5, 7, 11, 13, 17, 19
+19
+2
+
+for(int i=2; i<n; i++){
+if (isPrime(i)){
+	primeNum.add(i);
+}
+
+}
+
+
+boolean isPrime(int number){
+	for (int i<2; i<number; i++){
+    if(number%i==0){
+				return false
+    }
+  }
+  return true;
+}
+
+public static List<Integer> prime(int n){  // n= 19
+List<Integer> primeNum = new List<Integer>();
+if(n>2){
+for(int i=2; i<n; i++){  // i=2, n=19
+	if(n%i != 0){
+  	primeNum.add(i);
+  }
+}
+}
+
+return primeNum;
+
+
+Data structure
+
+serach a tree and replace an element
+
+search d replace it with h
+
+Tree  :
+          a
+        /   \
+       b     c
+      / \     \
+    f    e     d
+
+
+class Node{
+	char key;
+  Node left, right;
+
+  public Node(char item){
+  key = item;
+  left = right = null;
+  }
+}
+
+public static int binarySearch(){
+
+if(key < root.key)
+	root.left =
+
+}
+
+void searchAndReplace(char target, char replacement, node root){
+	if (root==null) return;
+  if(root.key==target){
+  	root.key=replacemenet;
+  }
+  searchAndReplace(target, replacement, root.left);
+  searchAndReplace(target, replacement, root.right);
+}
+
