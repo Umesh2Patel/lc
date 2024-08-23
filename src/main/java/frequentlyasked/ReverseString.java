@@ -20,6 +20,9 @@ public class ReverseString {
 		String output1 = reverseWord(input);
 		System.out.println("reverseWord output: " + output1);
 
+		String output3 = reverseWordsWithStringBuilder(input);
+		System.out.println("reverseWordsWithStringBuilder output: " + output3);
+
 	}
 
 	private static String reverseWord(String input) {
@@ -46,6 +49,24 @@ public class ReverseString {
 		}
 		
 		return reverseString;
+	}
+
+	public static String reverseWordsWithStringBuilder(String sentence) {
+		// Split the sentence into words using space as a delimiter
+		String[] words = sentence.split(" ");
+
+		// Use StringBuilder to build the reversed sentence
+		StringBuilder reversed = new StringBuilder();
+
+		// Loop through the words array in reverse order
+		for (int i = words.length - 1; i >= 0; i--) {
+			reversed.append(words[i]);
+			if (i != 0) {
+				reversed.append(" ");
+			}
+		}
+
+		return reversed.toString();
 	}
 
 	private static String reverseChar(String str) {
