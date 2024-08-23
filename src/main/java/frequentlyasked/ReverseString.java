@@ -12,7 +12,10 @@ public class ReverseString {
 
 
 		String output = reverseChar(input);
-		System.out.println("reverseString output: "+ output);
+		System.out.println("reverseChar using str.toCharArray() output: "+ output);
+
+		String output2 = reverseString(input);
+		System.out.println("reverseString using reverse().toString() and StringBuilder  output: "+ output2);
 		
 		String output1 = reverseWord(input);
 		System.out.println("reverseWord output: " + output1);
@@ -56,6 +59,11 @@ public class ReverseString {
 			result = c + result;
 		}
 		return result;
+	}
+
+	public static String reverseString(String str) {
+		StringBuilder sb = new StringBuilder(str);
+		return sb.reverse().toString();
 	}
 
 }
